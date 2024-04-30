@@ -10,8 +10,10 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.hamcrest.Matchers;
 import saucedemo.questions.VerificarIngreo;
+import saucedemo.task.Formulario;
 import saucedemo.task.Login;
 import saucedemo.task.OpenUp;
+import saucedemo.task.Seleccion;
 
 public class SauceDemoStepdefs {
     @Before
@@ -27,6 +29,23 @@ public class SauceDemoStepdefs {
 
     @Then("Verifico que inicio correctamente")
     public void verificoQueInicioCorrectamente() {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerificarIngreo.thePage(), Matchers.equalTo("PRODUCT")));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerificarIngreo.thePage(), Matchers.equalTo("Products")));
     }
-}
+    @When("selecciono el producto para luego ir al carrito")
+    public void seleccionoElProductoParaLuegoIrAlCarrito() {
+        OnStage.theActorInTheSpotlight().attemptsTo(Seleccion.theProduct());
+
+
+    }
+    @When("diligencio el formulario de compra")
+    public void diligencioElFormularioDeCompra() {
+        OnStage.theActorInTheSpotlight().attemptsTo(Formulario.fillForm());
+
+    }
+    @Then("Verifico la compra")
+    public void verificoLaCompra() {
+
+    }
+
+
+    }

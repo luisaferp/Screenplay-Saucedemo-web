@@ -9,8 +9,10 @@ Feature: automatizar el login para  y carrito de compra de saucedemo
     When inicia sesion
     Then Verifico que inicio correctamente
 
+
   @caso2
-  Scenario: ingreso exitoso
+
+  Scenario: compra exitosa
     Given que luisa ingresa a saucedemo
     When inicia sesion
     And selecciono el producto para luego ir al carrito

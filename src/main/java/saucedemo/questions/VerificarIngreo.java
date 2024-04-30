@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import saucedemo.userinterface.SaucedemoLogin;
 
+
 public class VerificarIngreo implements Question {
 
     public static VerificarIngreo thePage() {
