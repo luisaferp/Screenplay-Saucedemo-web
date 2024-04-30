@@ -9,4 +9,5 @@ public class SaucedemoFormulario {
     public static final Target TXT_POSTAL = Target.the("codigo postal").located(By.id("postal-code"));
     public static final Target BTN_CONTINUE =Target.the("boton continuar").located(By.id("continue")) ;
     public static final Target BTN_FINISH = Target.the("boton fin").located(By.id("finish"));
+    public static final Target LBL_COMPRA = Target.the("compra exitosa").located(By.className("complete-header"));
 }

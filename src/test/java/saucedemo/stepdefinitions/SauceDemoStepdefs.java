@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.hamcrest.Matchers;
+import saucedemo.questions.VerficarCompra;
 import saucedemo.questions.VerificarIngreo;
 import saucedemo.task.Formulario;
 import saucedemo.task.Login;
@@ -44,6 +45,7 @@ public class SauceDemoStepdefs {
     }
     @Then("Verifico la compra")
     public void verificoLaCompra() {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerficarCompra.chaquet(),Matchers.equalTo("Thank you for your order!")));
 
     }
 
